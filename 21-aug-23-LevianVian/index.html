@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LevianVian</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- ICON -->
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- NAVBAR SECTION -->
+    <header class="sticky">
+        <a href="#" class="logo">Lev<span>Ian</span></a>
+        <ul class="navbar">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Major</a></li>
+            <li><a href="#">Vision Mission</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="h-right">
+            <a href="#">Follow Me</a>
+            <a href="#"><i class="ri-instagram-line"></i></a>
+            <a href="#"><i class="ri-github-line"></i></a>
+            <a href="#"><i class="ri-twitter-x-line"></i></a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <!-- SECTION UTAMA -->
+    <section class="Home">
+        <div class="Home-text">
+            <h1>Hello,<span id="name">Name</span>!<br/></h1>
+            <!-- <p class="section__subtitle">
+            You will get information about school and child development through the website with a fresh look and modern.
+            </p> -->
+            <h1>Welcome to <br> my website</h1>
+                <p>I'm (Levian) a student from Vocational High School 1 Purwosari. I would like
+                    to introduce my school in this website and of course introduce myself. <br> So
+                    let's start our journey here!
+                </p>
+                <a href="#" class="jrny-btn">Start Journey</a>
+        </div>
+    </section>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!-- TELL Major -->
+    <div class="major-content">
+        <div class="row">
+            <div class="row-img">
+                <img src="./assets/Informatics3.jpg" alt="">
+            </div>
+            <h4>Informathics Engineering</h4>
+        </div>
+        <div class="row">
+            <div class="row-img">
+                <img src="./assets/Mechatronics2.jpg" alt="">
+            </div>
+            <h4>Mechatronics</h4>
+        </div>
+        <div class="row">
+            <div class="row-img">
+                <img src="./assets/Agriculture.jpg" alt="">
+            </div>
+            <h4>Agriculture</h4>
+        </div>
+        <div class="row">
+            <div class="row-img">
+                <img src="./assets/Mechanical2.jpg" alt="">
+            </div>
+            <h4>Mechanical Engineering</h4>
+        </div>
+    </div>
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- MAJOR ABOUT -->
+    <section class="MajorAbout">
+        <div class="center-text">
+            <h2>Some of the Major <br> from Informathics</h2>
+
+            <div class="MajorShow">
+                <div class="box">
+                    <img src="./assets/Pic1.jpg" alt="">
+                    <h6>Informathics</h6>
+                    <h4>Computer Science</h4>
+                </div>
+                <div class="box">
+                    <img src="./assets/Pic2.jpg" alt="">
+                    <h6>Informathics</h6>
+                    <h4>Multimedia</h4>
+                </div>
+                <div class="box">
+                    <img src="./assets/Pic3.jpg" alt="">
+                    <h6>Informathics</h6>
+                    <h4>Computer Network</h4>
+                </div>
+        </div>
+
+        <div class="center-btn">
+            <a href="#" class="btn">See More</a>
+        </div>
+    </section>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!-- VISION MISSION -->
+    <section class="Vision1">
+        <div class="Vision-text">
+            <h5>School Vision</h5>
+            <h2>My School Vision</h2>
+            <p>"The creating of graduates who have faith and piety to God Almighty,
+                have noble character, are highly competitive, care and are cultured
+                in the environment"</p>
+                <a href="#" class="center-btn">Read More!</a>
+        </div>
+
+        <div class="Vision-img">
+            <img src="./assets/School3.jpg" alt="">
+        </div>
+    </section>
+     
+    <!-- CONTACT SECTION -->
+    <section class="newsletter">
+        <div class="newsletter-content">
+          <div class="newsletter-text">
+            <h2>Want to know me?</h2>
+            <p>Get in touch with me</p>
+          </div>
+      
+          <form action="" onsubmit="return validateForm()">
+            <input type="email" placeholder="Enter your email..." required>
+            <input button class="center-btn" value="Contact Me"></button>
+          </form>
+        </div>
+      </section>
+      
+      <script>
+      function validateForm() {
+        var email = document.querySelector('input[type="email"]').value;
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+          alert("Please enter a valid email address.");
+          return false;
+        }
+        return true;
+      }
+
+      const storedName = localStorage.getItem('user');
+if (storedName) {
+    document.getElementById("name").innerHTML = storedName;
+} else {
+    // Jalankan replaceName jika nama belum ada
+    replaceName();
+}
+
+// Fungsi untuk mengganti nama
+function replaceName() {
+    let name = prompt("What's your name?", "");
+    if (name !== null && name.trim() !== "") {
+        document.getElementById("name").innerHTML = name;
+        // Simpan nama di localStorage agar bisa digunakan pada kunjungan berikutnya
+        localStorage.setItem('user', name);
+    }
+}
+
+let menu = document.querySelector('#menuicon';)
+let navbar = document.querySelector('#.navbar';)
+
+menu.onclick = () => {
+    menu.classList.toggle('bx-x');
+    navbar.classList.toggle('open');
+};
+
+      </script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
